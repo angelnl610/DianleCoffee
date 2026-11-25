@@ -1,0 +1,21 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Salidas del lote",
+  "properties": {
+    "resultado": {
+      "type": "string",
+      "title": "Resumen",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/OUTPUT"
+    },
+    "archivos": {
+      "type": "string",
+      "title": "Archivos del lote",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/keys"
+    },
+    "documentacion": {
+      "type": "string",
+      "title": "Documentación de la API",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/DOCUMENTACION"
+    }
+  }
+}

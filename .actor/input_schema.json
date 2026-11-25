@@ -1,0 +1,51 @@
+{
+  "title": "Lote Dianle Coffee",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "operation": {
+      "title": "Operación",
+      "type": "string",
+      "description": "Operación del Actor",
+      "enum": [
+        "analytics",
+        "inference"
+      ],
+      "editor": "select"
+    },
+    "batch_id": {
+      "title": "Lote",
+      "type": "string",
+      "description": "Identificador trazable",
+      "editor": "textfield"
+    },
+    "origen": {
+      "title": "Metadatos",
+      "type": "object",
+      "description": "Procedencia, fecha y alcance",
+      "editor": "json"
+    },
+    "rows": {
+      "title": "Registros",
+      "type": "array",
+      "description": "Hasta 2500 objetos y 1 MB en total. Inference admite precio_propuesto y, para simular, costo_unitario_ars, unidades y costo_fijo_ars. El escenario puede incluir margen_objetivo_pct.",
+      "editor": "json"
+    },
+    "adquirir_sepa": {
+      "title": "Adquirir SEPA derivado",
+      "type": "boolean",
+      "description": "Solo Analytics. Descarga hasta 50 observaciones AMBA de 12 fragmentos. Omitir rows.",
+      "default": false
+    },
+    "fecha_referencia": {
+      "title": "Fecha de referencia",
+      "type": "string",
+      "description": "Opcional. AAAA-MM-DD para reproducir el cálculo de antigüedad.",
+      "editor": "textfield"
+    }
+  },
+  "required": [
+    "operation",
+    "batch_id"
+  ]
+}

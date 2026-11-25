@@ -1,0 +1,12 @@
+**
+!requirements.txt
+!config.py
+!src/
+!src/*.py
+!models/
+!models/.gitkeep
+!models/model.joblib
+!models/metadata.json
+!.actor/
+!.actor/*.json
+!Dockerfile
